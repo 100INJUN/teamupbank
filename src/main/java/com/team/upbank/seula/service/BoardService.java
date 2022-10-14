@@ -111,7 +111,7 @@ public class BoardService {
 
         // 5단계. update후 list로 이동
         boardRepository.noticeUpdate(dto);
-        //good
+        
     }
 
     //공지사항 삭제처리
