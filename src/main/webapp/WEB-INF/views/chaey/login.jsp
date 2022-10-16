@@ -1,17 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/common/setting.jsp"%>
-
 <head>
 
   <!-- Basic Page Needs -->
   <title> 로그인 페이지 </title>
+	  <%@ include file="/WEB-INF/views/common/setting.jsp" %>
 </head>
 <body>
 
   <div id="wrap" class="boxed">
   
    <header>
-       <%@ include file="/WEB-INF/views/common/header.jsp" %>
+     	<%@ include file="/WEB-INF/views/common/header.jsp" %>
    </header><!-- <<< End Header >>> -->
    
    <div class="page-title">
@@ -43,7 +42,7 @@
 			<table id="loginTable" style="margin:auto">
 				<tr align="center">
 					<td colspan="2">
-						<img src="${path}/resources/images/img/chaey/loginimg.png" width="180px"><br>
+						<img src="static/images/img/chaey/loginimg.png" width="180px"><br>
 						<h4>member login</h4><br><br>
 					</td>
 				</tr>
@@ -73,7 +72,7 @@
 				</tr>
 				<tr><td><br></td></tr>
 				<tr>
-                    <td align="center" colspan="2">혹시 회원이 아니신가요?  <a href="/join">회원가입하기</a></td>
+					<td align="center" colspan="2">혹시 회원이 아니신가요?  회원가입하기</td>
 				</tr>
 			</table>
 			</div>

@@ -1,4 +1,4 @@
-package com.team.upbank.dto;
+package com.team.upbank.injune.auth.dto;
 
 import java.sql.Date;
 import java.sql.Timestamp;

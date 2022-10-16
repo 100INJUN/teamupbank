@@ -39,11 +39,11 @@
 			<div class="twelve columns bottom-1">
 		   
 		     	<div style="float:left; width:20%;">
-		     		<img src="join.png" width="180px">
+		     		<img src="${path}/resources/images/img/chaey/joinicon.png" width="180px">
 		     	</div>
 		     	
 		     	<div style="float:left; width:70%;">
-		     		<h3 class="title" align="center"> 홈페이지 회원가입 안내 </h3>
+		     		<h3 class="title"> 홈페이지 회원가입 안내 </h3>
 		     
 		     		<div class="about-project bottom-1">
 			      	<p>
@@ -89,10 +89,18 @@
 		<a href="#" class="button medium color bottom-2"> 회원가입 바로가기</a><br><br><br>
       	
       	<!-- End accordion -->
-		<form name="joinform" action="joinAction.do" method="post"  onsubmit="return signInCheck();">
+      	
+      	
+      	<form name="joinform" action="${path}/joinAction.do" method="post">
       	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
       		<h2>임시 회원가입창</h2>
 	      		<table>
+	      			<tr>
+						<th>계좌번호</th>
+						<td> 
+							<input type="text" id="account" name="account" required autofocus>
+						</td>
+					</tr>
 					<tr>
 						<th>이름</th>
 						<td> 
@@ -115,16 +123,6 @@
 						<th>생년월일</th>
 						<td>
 							<input type="date" id="birthday" name="birthday">
-						</td>
-					</tr>
-					<tr>
-						<th> 핸드폰</th>
-						<td>
-							<input type="text" class="input" name="hp1" maxlength="3" style="width: 50px" >
-							-
-							<input type="text" class="input" name="hp2" maxlength="4" style="width: 50px" >
-							-
-							<input type="text" class="input" name="hp3" maxlength="4" style="width: 50px" >
 						</td>
 					</tr>
 					<tr>

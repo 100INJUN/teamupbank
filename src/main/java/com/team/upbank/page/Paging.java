@@ -1,5 +1,8 @@
 package com.team.upbank.page;
 
+import lombok.Data;
+
+@Data
 public class Paging {
 	   private int pageSize = 10;   // 화면에 보여질 게시글의 갯수를 지정
 	   private int count = 0;       // 전체 글의 갯수를 저장하는 변수
@@ -80,91 +83,5 @@ public class Paging {
 	         System.out.println("=========================");
 	      }
 	   }
-	public int getPageSize() {
-		return pageSize;
-	}
-	public void setPageSize(int pageSize) {
-		this.pageSize = pageSize;
-	}
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}
-	public int getNumber() {
-		return number;
-	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
-	public String getPageNum() {
-		return pageNum;
-	}
-	public void setPageNum(String pageNum) {
-		this.pageNum = pageNum;
-	}
-	public int getStartRow() {
-		return startRow;
-	}
-	public void setStartRow(int startRow) {
-		this.startRow = startRow;
-	}
-	public int getEndRow() {
-		return endRow;
-	}
-	public void setEndRow(int endRow) {
-		this.endRow = endRow;
-	}
-	public int getCurrentPage() {
-		return currentPage;
-	}
-	public void setCurrentPage(int currentPage) {
-		this.currentPage = currentPage;
-	}
-	public int getPageCount() {
-		return pageCount;
-	}
-	public void setPageCount(int pageCount) {
-		this.pageCount = pageCount;
-	}
-	public int getStartPage() {
-		return startPage;
-	}
-	public void setStartPage(int startPage) {
-		this.startPage = startPage;
-	}
-	public int getPageBlock() {
-		return pageBlock;
-	}
-	public void setPageBlock(int pageBlock) {
-		this.pageBlock = pageBlock;
-	}
-	public int getEndPage() {
-		return endPage;
-	}
-	public void setEndPage(int endPage) {
-		this.endPage = endPage;
-	}
-	public int getPrev() {
-		return prev;
-	}
-	public void setPrev(int prev) {
-		this.prev = prev;
-	}
-	public int getNext() {
-		return next;
-	}
-	public void setNext(int next) {
-		this.next = next;
-	}
-	@Override
-	public String toString() {
-		return "Paging [pageSize=" + pageSize + ", count=" + count + ", number=" + number + ", pageNum=" + pageNum
-				+ ", startRow=" + startRow + ", endRow=" + endRow + ", currentPage=" + currentPage + ", pageCount="
-				+ pageCount + ", startPage=" + startPage + ", pageBlock=" + pageBlock + ", endPage=" + endPage
-				+ ", prev=" + prev + ", next=" + next + "]";
-	}
-	   
 
 }

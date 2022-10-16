@@ -1,4 +1,4 @@
-package com.team.upbank.dao;
+package com.team.upbank.injune.repository;
 
 import com.team.upbank.injune.auth.entity.Member;
 import org.apache.ibatis.annotations.Mapper;
