@@ -1,4 +1,4 @@
-package com.team.upbank.injune.auth.service.controller;
+package com.team.upbank.injune.controller;
 
 import com.team.upbank.injune.domain.AccountTransfer;
 import com.team.upbank.injune.service.AccountTransferService;
