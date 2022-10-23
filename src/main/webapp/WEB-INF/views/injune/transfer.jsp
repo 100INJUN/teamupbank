@@ -15,17 +15,7 @@
 
   <!-- Main Style -->
   <script type="text/javascript">
-  
-  	$(function(){
-  		$("#click").click(function() {
-			alert("INSERT INTO account_transfer(transfer_id, account,transfer_sender_account, balance, deposit_and_withdrawal, transfer_date,transfer_withdrawal_comment,transfer_deposit_comment, trnasfer_account_holder)VALUES(1 ,'111-33-22222' , '111-22-42322' ,5000000, '입금', '2022-10-05', '백인준' , '백인준', '백인준');");
-		})
-		
-		$("#click2").click(function(){
-			alert("-- 이체시 계좌A의 잔고에서 나온 돈이 계좌B의 잔고로 들어가야한다 UPDATE INTO account_tblSET balance = balance + 5000000WHERE account = 111-33-22222;UPDATE INTO account_tblSET balance = balance - 5000000WHERE account = 111-22-42322;commit;-- 그렇다면 입출금 내역 기록에도 바뀌어야함UPDATE into account_balanceSET b.balance = b.balance + 5000000 , b.balance_plus = 5000000,b.name_plus = a.NAMEFROM  member_tbl a , account_balance bWHERE a.ACCOUNT=b.ACCOUNTb.account = 111-33-22222;UPDATE into account_balanceSET b.balance = b.balance - 5000000 , b.balance_minus = -5000000,b.name_minus = a.NAMEFROM  member_tbl a , account_balance bWHERE a.ACCOUNT=b.ACCOUNTb.account = 111-22-42322;commit;")
-		})
-		
-  	})
+
   </script>
   
   <!--[if lt IE 9]>
