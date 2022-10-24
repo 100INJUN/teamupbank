@@ -3,6 +3,7 @@ package com.team.upbank.injune.controller;
 import com.team.upbank.injune.domain.AccountTransfer;
 import com.team.upbank.injune.service.AccountTransferService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import java.util.Map;
 
 @RequiredArgsConstructor
 @RestController
+@Slf4j
 @RequestMapping("/api")
 public class AccountTransferController {
 
@@ -31,18 +33,18 @@ public class AccountTransferController {
 
     @GetMapping("/tranfer/{tfNum}")
     public Map<String, Object> getTransfer(@PathVariable("tfNum") Long tfNum) {
+        log.info("tfNum" + tfNum);
         Map<String, Object> result = new HashMap<>();
         AccountTransfer transfer = accountTransferService.getTransfer(tfNum);
         if (transfer == null) {
             result.put("detail", null);
             result.put("success", false);
-            result.put("message", "계죄이체내역 상세조회 실패");
+            result.put("message", "계좌이체내역 상세조회 실패");
         } else {
             result.put("detail", accountTransferService.getTransfer(tfNum));
             result.put("success", true);
-            result.put("message", "계죄이체내역 상세조회 완료");
+            result.put("message", "계좌이체내역 상세조회 완료");
         }
-
         return result;
     }
 }

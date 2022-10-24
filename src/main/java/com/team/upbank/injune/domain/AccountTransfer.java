@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = "ACCOUNT_TRANSFER")
+@Table(name = "account_transfer")
 public class AccountTransfer {
 
     @ApiModelProperty("계좌 이체내역 아이디")
