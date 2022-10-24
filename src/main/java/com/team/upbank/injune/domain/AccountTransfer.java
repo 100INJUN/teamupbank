@@ -1,13 +1,11 @@
 package com.team.upbank.injune.domain;
 
+import com.team.upbank.eunjin.domain.Account;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter
@@ -21,7 +19,8 @@ public class AccountTransfer {
     private Long tfNum;
 
     @ApiModelProperty("계좌 이체내역 계좌")
-    @Column
+    @ManyToOne(targetEntity = Account.class, fetch = FetchType.LAZY)
+    @JoinColumn(name="account", insertable = false, updatable = false)
     private String account;
 
     @ApiModelProperty("계좌 이체내역 보낸사람계좌")

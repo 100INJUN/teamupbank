@@ -2,7 +2,6 @@ package com.team.upbank.eunjin.controller;
 
 import com.team.upbank.eunjin.domain.Account;
 import com.team.upbank.eunjin.service.AccountService;
-import com.team.upbank.injune.domain.AccountTransfer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
