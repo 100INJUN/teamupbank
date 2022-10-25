@@ -21,11 +21,7 @@ public class AccountTransferService {
     public List<AccountTransfer> getTransferList() {
         return accountTransferRepository.findAll(Sort.by(Sort.Direction.DESC, "tfDate"));
     }
-//
-//    @Transactional(readOnly = true)
-//    public Page<AccountTransfer> getTransferPage(SearchAccountTransfer search, Pageable page){
-//        return accountTransferRepository.
-//    }
+
 
     @Transactional(readOnly = true)
     public AccountTransfer getTransfer(Long tfNum) {

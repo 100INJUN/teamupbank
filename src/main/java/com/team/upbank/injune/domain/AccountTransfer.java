@@ -19,8 +19,9 @@ public class AccountTransfer {
     private Long tfNum;
 
     @ApiModelProperty("계좌 이체내역 계좌")
-    @ManyToOne(targetEntity = Account.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="account", insertable = false, updatable = false)
+//    @ManyToOne(targetEntity = Account.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name="account", insertable = false, updatable = false)
+    @Column
     private String account;
 
     @ApiModelProperty("계좌 이체내역 보낸사람계좌")
